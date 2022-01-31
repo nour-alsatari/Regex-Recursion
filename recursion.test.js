@@ -3,13 +3,13 @@
 function division(number, dividedBy) {
   // Write you logic here.
   let x = 0;
-  function divisionSequence(number, dividedBy) {
+  function divisionnums(number, dividedBy) {
     if (dividedBy == 0) {
       return 0;
     }
     if (number - dividedBy >= dividedBy || number - dividedBy == 0) {
       x += 1;
-      return divisionSequence(number - dividedBy, dividedBy);
+      return divisionnums (number-dividedBy, dividedBy);
     } else {
       return;
     }
