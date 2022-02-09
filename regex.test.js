@@ -4,21 +4,17 @@
 characters (no numbers and symbols) and it should end with capital A else return false */
 
 function capitalA(s) {
-  // Add your logic.
-  let numericalTest = /\d/g.test(s);
-  let capitalTest = /A$/.test(s);
-  if (numericalTest == false && capitalTest == true) {
+  let reex = /[a-zA-z\s]A$/;
+  if (reex.test(s)) {
     return true;
-  } else {
-    return false;
-  }
+  } else return false;
 }
 
 /* Write a function that take a string and return true if the the sting is following the emails pattern
 which end with io (example@example.io) */
 
 function ioEmail(email) {
-  return /^[\w]+@([\w])+[\w](.io)$/g.test(email);
+  return /^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+.io$/.test(email);
 }
 
 /* You have a text that contain image names with their extention you need to write a function to 
@@ -28,9 +24,15 @@ required extention are jpg, jpeg and png.
 
 function imagesSearcher(text) {
   let splittedText = text.split(" ");
-  let regex = /([\w])+(.jpeg|.jpg|.png)$/g;
-  let arr = splittedText.filter((ele) => regex.test(ele));
-  return arr;
+  let regex = /([\w])+(.jpeg|.jpg|.png)$/;
+
+  let filtered = splittedText.filter((ele) => {
+    if (regex.test(ele)) {
+      return ele;
+    }
+  });
+
+  return filtered;
 }
 
 describe("Test capitalA", () => {
