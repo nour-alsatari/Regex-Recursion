@@ -1,7 +1,6 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy) {
-  // Write you logic here.
   let x = 0;
   function divisionnums(number, dividedBy) {
     if (dividedBy == 0) {
@@ -9,7 +8,7 @@ function division(number, dividedBy) {
     }
     if (number - dividedBy >= dividedBy || number - dividedBy == 0) {
       x += 1;
-      return divisionnums (number-dividedBy, dividedBy);
+      return divisionnums(number - dividedBy, dividedBy);
     } else {
       return;
     }
@@ -24,7 +23,6 @@ pow(2,4) = 16
 */
 
 function pow(x, n) {
-  // Write you logic here.
   if (x == 0) {
     return 1;
   } else if (n == 1) {
@@ -73,10 +71,9 @@ Input: n = 3, k = 3
 Output: "213" */
 
 function permutations(n, k) {
-  let arr = [];
-  // Write you logic here.
-  // needs probabilities background to solve
-  return arr;
+
+  // i dont know this one 
+  
 }
 
 describe("Test division", () => {
