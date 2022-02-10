@@ -13,7 +13,7 @@ function division(number, dividedBy) {
       return;
     }
   }
-  divisionSequence(number, dividedBy);
+  divisionnums(number, dividedBy);
   return x;
 }
 
